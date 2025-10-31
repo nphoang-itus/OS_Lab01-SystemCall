@@ -16,3 +16,29 @@ kernel/kernel
 user/usys.S
 .gdbinit
 TAGS
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtualenv / env files
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

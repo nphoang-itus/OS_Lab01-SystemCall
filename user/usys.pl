@@ -42,3 +42,6 @@ entry("getpid");
 entry("sbrk");
 entry("pause");
 entry("uptime");
+
+# NPHOANG: NEW SYSTEM CALL
+entry("hello");

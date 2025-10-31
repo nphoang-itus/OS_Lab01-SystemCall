@@ -107,3 +107,9 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// NPHOANG: NEW SYSTEM CALL
+int sys_hello(void) {
+  printf("Hello World!\n");
+  return 0;
+}

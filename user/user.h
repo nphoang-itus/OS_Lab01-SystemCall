@@ -1,3 +1,6 @@
+/* bring common integer typedefs (uint, ushort, etc.) into user space */
+#include "kernel/types.h"
+
 #define SBRK_ERROR ((char *)-1)
 
 struct stat;
@@ -47,3 +50,6 @@ void printf(const char*, ...) __attribute__ ((format (printf, 1, 2)));
 // umalloc.c
 void* malloc(uint);
 void free(void*);
+
+// NPHOANG: NEW SYSTEM CALL
+int hello(void);
