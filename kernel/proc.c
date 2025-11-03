@@ -146,6 +146,11 @@ found:
   p->context.ra = (uint64)forkret;
   p->context.sp = p->kstack + PGSIZE;
 
+  /* ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+  // Initialize trace mask to 0 (no tracing)
+  p->trace_mask = 0;
+  /* ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
+
   return p;
 }
 
@@ -299,6 +304,11 @@ kfork(void)
   release(&wait_lock);
 
   acquire(&np->lock);
+
+  /* ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+  np->trace_mask = p->trace_mask; // Inherit trace mask from parent
+  /* ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
+
   np->state = RUNNABLE;
   release(&np->lock);
 

@@ -28,6 +28,11 @@ char* sys_sbrk(int,int);
 int pause(int);
 int uptime(void);
 
+/* ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+// NPHOANG: NEW SYSTEM CALLS
+int trace(int);
+/* ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
+
 // ulib.c
 int stat(const char*, struct stat*);
 char* strcpy(char*, const char*);

@@ -43,5 +43,10 @@ entry("sbrk");
 entry("pause");
 entry("uptime");
 
+# ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+# NPHOANG: NEW SYSTEM CALL
+entry("trace");
+# ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
+
 # NPHOANG: NEW SYSTEM CALL
 entry("hello");

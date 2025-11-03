@@ -21,5 +21,10 @@
 #define SYS_mkdir  20
 #define SYS_close  21
 
+/* ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+// NPHOANG: NEW SYSTEM CALLS
+#define SYS_trace  23
+/* ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
+
 // NPHOANG: NEW SYSTEM CALL
 #define SYS_hello 22
