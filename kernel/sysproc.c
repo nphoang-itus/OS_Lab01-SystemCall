@@ -113,3 +113,14 @@ int sys_hello(void) {
   printf("Hello World!\n");
   return 0;
 }
+
+/* ==================== BEGIN: CUSTOM CODE (by Phuc Hoang) ==================== */
+uint64
+sys_trace(void)
+{
+  int mask;
+  argint(0, &mask);          // Lấy tham số từ user space
+  myproc()->trace_mask = mask;
+  return 0;
+}
+/* ==================== END: CUSTOM CODE (by Phuc Hoang) ==================== */
